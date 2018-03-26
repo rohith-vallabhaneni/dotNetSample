@@ -20,7 +20,7 @@ namespace demo
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-		.UseUrls("http://+:" + Environment.GetEnvironmentVariable("DRP_CF_HTTP_PORT"))
+		.UseUrls("http://+:" + Environment.GetEnvironmentVariable("PORT"))
                 .Build();
     }
 }
